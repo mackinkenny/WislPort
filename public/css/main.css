@@ -1,0 +1,246 @@
+body, html {
+    background: linear-gradient(180deg, #F2C3C5 0%, #EC99A4 100%);
+    font-family: 'Barlow'!important;
+}
+.br-40 {
+    border-radius: 40px;
+}
+.main-title {
+    font-size: 32px;
+    color: #000000;
+}
+.menu-point {
+    background-color: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.menu-point p {
+    color: black;
+}
+.active-point {
+    background-color: #1B3C5D;
+}
+.active-tool-point {
+    background: #000000;
+}
+.active-point p, .active-tool-point p {
+    color: white;
+}
+
+.label-text {
+    color: #000000;
+    opacity: 0.5;
+    font-size: 14px;
+    line-height: 24px;
+}
+.lg-text {
+    font-size: 24px;
+    line-height: 24px;
+    color: #000000;
+}
+.regular-text {
+    font-size: 18px;
+    color: #000000;
+}
+.regular-white {
+    font-size: 18px;
+    color: #ffffff;
+}
+.question-anchor {
+    color: rgba(0, 0, 0, 0.35);
+}
+.question-anchor.active {
+    color: #000000;
+}
+.high-bg {
+    background-color: rgba(132, 227, 108, 1);
+}
+.medium-bg {
+    background-color: rgba(243, 187, 42, 1);
+}
+.low-bg {
+    background-color: rgba(235, 51, 51, 1);
+}
+.skiptranslate {
+    display: none!important;
+}
+body {
+    top: 0 !important;
+    position: static !important;
+}
+.active-icon {
+    height:24px;
+}
+.active-icon:hover .tag-for-icon {
+    display: block;
+}
+.active-icon i {
+    color: #1B3C5D;
+}
+.tag-for-icon {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -38px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+.swal2-confirm {
+    background: #1B3C5D!important;
+}
+.swal2-html-container {
+    color: #fefefe!important;
+}
+.disable-btn {
+    pointer-events: none;
+    filter: blur(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+[type='checkbox'] {
+    border-radius: 3px!important;
+}
+[type='checkbox']:checked, [type='radio']:checked {
+    background: #000000!important;
+}
+
+
+
+
+
+
+/* Tab content - closed */
+.tab-content {
+    max-height: 0;
+    -webkit-transition: max-height .1s;
+    -o-transition: max-height .1s;
+    transition: max-height .1s;
+}
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
+    max-height: 100%;
+}
+/* Label formatting when open */
+.tab input:checked + label{
+    /*!*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*!*/
+    /*font-size: 1.25rem; !*.text-xl*!*/
+    /*padding: 1.25rem; !*.p-5*!*/
+    border-right-width: 2px; /*.border-l-2*/
+    border-color: #1B3C5D; /*.border-indigo*/
+    /*background-color: #f8fafc; !*.bg-gray-100 *!*/
+    /*color: #6574cd; !*.text-indigo*!*/
+}
+/* Icon */
+.tab label::after {
+    float:right;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+/* Icon formatting - closed */
+.tab input[type=checkbox] + label::after {
+    content: "\25BE";
+    font-weight:bold; /*.font-bold*/
+    border-width: 1px; /*.border*/
+    border-radius: 9999px; /*.rounded-full */
+}
+/* Icon formatting - open */
+.tab input[type=checkbox]:checked + label::after {
+    transform: rotate(300deg);
+    background-color:#000000; /*.bg-indigo*/
+    color: #f8fafc; /*.text-grey-lightest*/
+}
+
+.company-details {
+    max-height: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.company-details.active {
+    max-height: 315px;
+}
+.fade-in {
+    -webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
